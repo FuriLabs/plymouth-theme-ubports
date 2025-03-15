@@ -13,21 +13,21 @@ time_count = 0;
 fun refresh_callback() {
     time_count++;
     
-    if (time_count >= 100) {
+    // Image1 stays for 100 counts, Image2 stays for 50 counts
+    if ((current_image == 1 && time_count >= 100) || (current_image == 2 && time_count >= 50)) {
         time_count = 0;
-        
         if (current_image >= 2) {
             current_image = 1;
         } else {
             current_image = current_image + 1;
         }
-        
+
         change = Image("image" + current_image + ".png");
         first_sprite.SetImage(change);
     }
 }
 
-Window.SetBackgroundTopColor(0, 0, 0);           
+Window.SetBackgroundTopColor(0, 0, 0);
 Window.SetBackgroundBottomColor(0, 0, 0);
 
 Plymouth.SetRefreshFunction(refresh_callback);
