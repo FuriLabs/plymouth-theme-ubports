@@ -1,0 +1,28 @@
+Source: plymouth-theme-ubports
+Section: misc
+Priority: optional
+Maintainer: Bardia Moshiri <bardia@furilabs.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/furilabs/plymouth-theme-ubports.git
+Vcs-Browser: https://github.com/furilabs/plymouth-theme-ubports
+
+Package: plymouth-theme-ubports
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ plymouth,
+ plymouth-label,
+Provides:
+ plymouth-theme,
+Description: boot animation, logger and I/O multiplexer - UBports theme
+ Plymouth provides a boot-time I/O multiplexing framework - the most obvious
+ use for which is to provide an attractive graphical animation in place of
+ the text messages that normally get shown during boot. (The messages are
+ instead redirected to a logfile for later viewing.) However, in event-driven
+ boot systems Plymouth can also usefully handle user interaction such as
+ password prompts for encrypted file systems.
+ .
+ This package provides the default UBports updater theme.

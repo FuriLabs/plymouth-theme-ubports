@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=UBports
+Description=UBports animation
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/ubports
+ScriptFile=/usr/share/plymouth/themes/ubports/ubports.script
